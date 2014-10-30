@@ -114,7 +114,7 @@ void extract8(struct_image* image, void* bitmap) {
     image->binary_mask.rows[y]=mp;
 
 		pixel=((uint32*)bitmap)[up++];
-    if (pixel>0xfeffffff) { // pixel is solid
+    if (pixel>0x00ffffff) { // pixel is solid
       ((uint8*)image->channels[0].data)[p]=pixel&0xff;
       ((uint8*)image->channels[1].data)[p]=(pixel>>8)&0xff;
       ((uint8*)image->channels[2].data)[p]=(pixel>>16)&0xff;
@@ -127,7 +127,7 @@ void extract8(struct_image* image, void* bitmap) {
 
 		for (x=1; x<image->width; x++) {
       pixel=((uint32*)bitmap)[up++];
-      if (pixel>0xfeffffff) { // pixel is solid
+      if (pixel>0x00ffffff) { // pixel is solid
 				((uint8*)image->channels[0].data)[p]=pixel&0xff;
 				((uint8*)image->channels[1].data)[p]=(pixel>>8)&0xff;
 				((uint8*)image->channels[2].data)[p]=(pixel>>16)&0xff;
