@@ -1,0 +1,41 @@
+v0.6.2
+* fix to ignore some enblend options possibly used by default by Hugin
+* fix for one minor compiler warning
+
+v0.6.1
+* fix for a bug that might cause black banding on the bottom edge
+
+v0.6
+* option to cache input images (--cache)
+* fix for vignetting and corruption of right edge
+* fixes to 16-bit processing (spotted by Matthias Kabel)
+* nicer colouring for --save-seams
+
+v0.5
+* fixes to GeoTIFF support
+* fix for dark banding problems when compiling with g++>=4.7
+
+v0.4
+* --save-seams and --load-seams for external editing of seams
+* TIFF position offsets are now preserved
+* removal of some image size limits for 64 bit builds (based on changes by Pablo dAngelo)
+* (untested) GeoTIFF support (based on changes by Pablo dAngelo)
+
+v0.31beta
+* pseudowrapping bugs fixed
+
+v0.3beta
+* pseudowrapping - single-image input is blended around the left/right image boundary
+
+v0.2
+* fixed: no more segfaults when compiling with -O3
+* work-around for seaming bug which left areas smeared in some cases
+* added --reverse to change image priority (affects how "seaming bug" areas are solved)
+* added JPEG output support
+
+v0.1a
+* added --bgr switch to correct channel order for some users
+
+v0.1
+* initial release
+
